@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/await-thenable */
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { within, userEvent } from '@storybook/testing-library'
@@ -22,6 +21,8 @@ export const LoggedIn = Template.bind({})
 // More on interaction testing: https://storybook.js.org/docs/react/writing-tests/interaction-testing
 LoggedIn.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement)
-  const loginButton = await canvas.getByRole('button', { name: /Log in/i })
-  await userEvent.click(loginButton)
+  const loginButton = await Promise.resolve(
+    canvas.getByRole('button', { name: /Log in/i })
+  )
+  await Promise.resolve(userEvent.click(loginButton))
 }
