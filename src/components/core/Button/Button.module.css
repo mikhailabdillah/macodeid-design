@@ -1,0 +1,46 @@
+.root {
+  @apply inline-flex items-center py-2.5 px-4 rounded-md;
+  @apply bg-gray-100 text-gray-800 border border-transparent;
+  @apply transition-colors duration-200;
+
+  &:hover {
+    @apply bg-gray-200 text-gray-800;
+  }
+}
+
+.filled {
+  &.primary {
+    @apply bg-blue-400 text-white shadow-lg shadow-blue-400 no-underline outline-0 outline-offset-0 transition-all duration-200;
+    text-decoration: none;
+    box-shadow: 0 4px 12px -1px rgb(47 137 252 / 0.6);
+
+    &:hover {
+      @apply bg-blue-500 text-white;
+    }
+
+    &:focus {
+      outline: 2px solid;
+      outline-color: white;
+      box-shadow: 0 0 0 4px rgb(47 137 252 / 0.6);
+    }
+  }
+}
+
+.outlined {
+  @apply border border-gray-100;
+  &.primary {
+    @apply bg-transparent text-blue-500 border border-blue-500;
+
+    &:hover {
+      @apply bg-blue-500 border-transparent text-white;
+    }
+  }
+}
+
+.small {
+  @apply text-sm py-2 px-3;
+}
+
+.large {
+  @apply text-xl py-3 px-6;
+}
