@@ -4,21 +4,33 @@
 
 @layer base {
   h1 {
-    @apply text-6xl leading-6;
+    @apply text-6xl font-medium;
   }
   h2 {
-    @apply text-5xl leading-6;
+    @apply text-5xl font-medium;
   }
   h3 {
-    @apply text-4xl leading-6;
+    @apply text-4xl font-medium;
   }
   h4 {
-    @apply text-3xl leading-6;
+    @apply text-3xl font-medium;
   }
   h5 {
-    @apply text-2xl leading-6;
+    @apply text-2xl font-medium;
   }
   h6 {
-    @apply text-xl leading-6;
+    @apply text-xl font-medium;
+  }
+  a {
+    @apply font-medium text-blue-300 transition-colors duration-200;
+    text-decoration: 2px solid underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      @apply text-blue-500;
+    }
+  }
+  svg {
+    @apply inline-block;
   }
 }
